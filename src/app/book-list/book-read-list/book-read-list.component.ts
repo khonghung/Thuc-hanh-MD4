@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormControlName, FormGroup, Validators} from "@angular/forms";
+import { ActivatedRoute, Router } from '@angular/router';
 import { Book } from 'src/app/book';
 import { BookService } from '../service/book.service';
 
@@ -21,5 +22,13 @@ export class BookReadListComponent implements OnInit {
     this.bookService.getAll().subscribe(res => {
       this.books = res;
     })
+  }
+
+  changeRead(id: any) {
+    this.bookService.findByID(id).subscribe(res => {
+        console.log(res);
+        res.read = false;
+    })
+
   }
 }

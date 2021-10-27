@@ -5,9 +5,12 @@
     </thead>
     <tbody>
         <tr *ngFor="let book of books ; let i = index">
-        <td>{{ book.name }}</td>
-        <td>{{ book.read }}</td>
-    
+        <td *ngIf="book.read">{{ book.name }}</td>
+        <td *ngIf="book.read"><button (click)="changeRead(book.id)">Đã đọc</button></td>
+      </tr>
+      <tr>
+          <input type="text">
+          <button type="submit">thêm</button>
       </tr>
 
     </tbody>
