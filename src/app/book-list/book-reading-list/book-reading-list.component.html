@@ -1,15 +1,20 @@
-
-<a routerLink="/">Trang chủ</a>
-<table class="table table-bordered">
-    <thead>
-        <tr style="text-align: center; font-weight: bold;">Danh sách đã đọc</tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let book of books ; let i = index">
-        <td *ngIf="!book.read">{{ book.name }}</td>
-        <td *ngIf="!book.read"><button>Đọc lại</button></td>
-      </tr>
-
-    </tbody>
-  </table>
-  <a routerLink= "/book-reading">Danh sách đọc</a>
+<div class="card">
+    <h5 class="card-header">Danh sách đã đọc</h5>
+    <div class="card-body">
+      <button class="btn btn-primary" routerLink="/">Trang chủ</button>
+      <table class="table table-bordered">
+        <tbody>
+          <tr *ngFor="let book of books; let i = index">
+            <td *ngIf="!book.read">{{ book.name }}</td>
+            <td *ngIf="!book.read">
+              <button class="btn btn-warning">Đọc lại</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn btn-primary" routerLink="/book-read">
+        Danh sách đọc
+      </button>
+    </div>
+  </div>
+  
