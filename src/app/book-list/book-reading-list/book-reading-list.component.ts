@@ -5,8 +5,8 @@ import { BookService } from '../service/book.service';
 
 @Component({
   selector: 'app-book-read-list',
-  templateUrl: './book-read-list.component.html',
-  styleUrls: ['./book-read-list.component.css']
+  templateUrl: './book-reading-list.component.html',
+  styleUrls: ['./book-reading-list.component.css']
 })
 export class BookReadingListComponent implements OnInit {
   books : Book[] = [];

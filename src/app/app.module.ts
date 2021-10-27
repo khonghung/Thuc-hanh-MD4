@@ -7,8 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { BookReadListComponent } from './book-list/book-read-list/book-read-list.component';
-import { BookReadingListComponent } from './book-list/book-reading-list/book-reading-list.component';
 import { BookReadCreateComponent } from './book-list/book-read-list/book-read-create/book-read-create.component';
+import { BookReadingListComponent } from './book-list/book-reading-list/book-reading-list.component';
 
 @NgModule({
   declarations: [
@@ -16,16 +16,16 @@ import { BookReadCreateComponent } from './book-list/book-read-list/book-read-cr
     BookListComponent,
     BookReadListComponent,
     BookReadingListComponent,
-    BookReadCreateComponent
+    BookReadCreateComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, 
+    AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
